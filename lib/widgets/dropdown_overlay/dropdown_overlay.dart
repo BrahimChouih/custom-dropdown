@@ -382,9 +382,11 @@ class _DropdownOverlayState<T> extends State<_DropdownOverlay<T>> {
                                                   : hintBuilder(context),
                                           },
                                         ),
-                                        const SizedBox(width: 12),
                                         decoration?.expandedSuffixIcon ??
-                                            _defaultOverlayIconUp,
+                                            Padding(
+                                              padding: EdgeInsetsDirectional.only(start: 12),
+                                              child: _defaultOverlayIconUp,
+                                            ),
                                       ],
                                     ),
                                   ),
